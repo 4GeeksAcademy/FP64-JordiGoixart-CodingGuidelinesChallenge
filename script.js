@@ -14,8 +14,4 @@ const _printFibonacciNumbers = (positionQuantity, currentPosition = 0) => {
 }
 };
 
-const getFibonacciSequence = (positionQuantity) => {
-  _printFibonacciNumbers(positionQuantity);
-};
-
-getFibonacciSequence(10);
+_printFibonacciNumbers(10);
