@@ -7,22 +7,14 @@ const _getFibonacciNumbers = (index) => {
   return _getFibonacciNumbers(index - 1) + _getFibonacciNumbers(index - 2);
 };
 
-const _isLessThanZero = (number) => {
-  return number < 0;
-};
-
 const _printFibonacciNumbers = (positionQuantity, currentPosition = 0) => {
-  if (currentPosition >= positionQuantity) {
-    return;
-  }
+  if (currentPosition < positionQuantity) {
   console.log(_getFibonacciNumbers(currentPosition));
   _printFibonacciNumbers(positionQuantity, currentPosition + 1);
+}
 };
 
 const getFibonacciSequence = (positionQuantity) => {
-  if (_isLessThanZero(positionQuantity)) {
-    return _getFibonacciNumbers(FIRST_POSITION);
-  }
   _printFibonacciNumbers(positionQuantity);
 };
 
